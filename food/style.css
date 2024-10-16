@@ -1,0 +1,1288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", system-ui;
+}
+
+/* --------------------  Body --------------------------------- */
+
+body {
+  color: #363636;
+  overflow-x: hidden;
+}
+
+/* --------------------  Reusable Classes --------------------------------- */
+
+.t {
+  margin-top: 10rem;
+}
+
+.top {
+  margin-top: 5rem;
+}
+
+.bottom {
+  margin-top: 10rem;
+  margin-bottom: 12rem;
+}
+
+.row {
+  padding: 1rem 6rem;
+}
+
+p {
+  color: #797979;
+}
+
+section {
+  margin: 7rem 0;
+}
+
+.heading {
+  font-size: 3.5rem;
+  text-align: center;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+/* --------------------  Header --------------------------------- */
+
+header {
+  height: 100vh;
+}
+
+/* --------------------  Nav --------------------------------- */
+
+/* General navbar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+/* Logo styling */
+.nav_logo .logo {
+  max-width: 7rem;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav_logo h2 {
+  color: #e34036;
+  font-size: 1.5rem;
+}
+
+/* Links styling */
+.nav_links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 1150px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav_links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Link styles */
+.nav_links a {
+  text-decoration: none;
+  color: #363636;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav_links a:hover {
+  color: #e34036;
+}
+
+.nav_links a:hover::after {
+  content: "";
+  height: 1px;
+  background-color: #e34036;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.nav_links .btn {
+  background-color: #e34036;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav_links .btn:hover {
+  background-color: #f32116;
+  color: #fff;
+}
+
+/* -------------------- home ----------------------------- */
+
+.home {
+  display: flex;
+  gap: 8rem;
+}
+
+.home_text h1 {
+  font-size: 3.7em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.home_text p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+}
+
+.home_btn {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.home_btn a {
+  background-color: #e34036;
+  padding: 1rem 2rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.home_btn a:hover {
+  background-color: #fff;
+  border: 1px solid #e34036;
+  color: #363636;
+}
+
+.home_btn .Outline {
+  background-color: #363636;
+  border: none;
+  color: #fff;
+  padding: 1rem 3.5rem;
+}
+
+
+
+.home_img img {
+  margin-top: -7rem;
+  max-width: 40rem;
+}
+
+/* --------------------  Trusted --------------------------------- */
+
+.Trusted_by {
+  background-color: #fcfcfc;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.trusted_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  opacity: 70%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* ------------------------------- How it Works ---------------------------- */
+
+.how_work_cards {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 3rem;
+}
+
+.work_card {
+  width: 30rem;
+}
+
+.work_card .img {
+  display: flex;
+  justify-content: center;
+}
+
+.work_card .img img {
+  max-width: 20rem;
+}
+
+.text .list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.text .list h1 {
+  color: rgb(199, 199, 199);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.list h3 {
+  font-size: 2rem;
+}
+
+.text p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ------------------------------- Mission ---------------------------- */
+
+.mission {
+  background-color: #fcfcfc;
+  padding-bottom: 5rem;
+}
+.mission {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 5rem;
+}
+
+.Join {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 5rem;
+}
+
+.service {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 5rem;
+}
+
+.Join_img img,
+.mission_img img {
+  max-width: 35rem;
+}
+
+.Join_text h2,
+.service_text h2,
+.mission_text h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.service_text p,
+.mission_text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* ------------------------------- Service  ---------------------------- */
+
+.service_Section {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.service_Section .heading {
+  margin-bottom: 0;
+}
+
+.service_img img {
+  max-width: 35rem;
+}
+
+.service_text {
+  margin-top: 5rem;
+}
+
+.service_food {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.service_food .home_btn a {
+  background-color: #e34036;
+  color: #fff;
+}
+
+.service_food .home_btn a:hover {
+  background-color: #363636;
+  border: none;
+}
+
+.service_food a {
+  background-color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 11px;
+  color: #363636;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 1px solid #e6e5e5;
+  box-shadow: -1px 15px 26px -4px rgb(161 151 151 / 15%);
+  transition: all 0.3s;
+}
+
+.service_food a:hover {
+  border: 1px solid #e34036;
+}
+
+.service_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service_card {
+  width: 30rem;
+  border-radius: 9px;
+  padding: 2rem;
+  box-shadow: 0px -1px 30px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.service_card h2 {
+  font-size: 3rem;
+  color: #e34036;
+  margin-bottom: 1rem;
+}
+
+.service_card p {
+  font-size: 1.2rem;
+}
+
+/* -------------------------- Testimonials ------------------------------- */
+
+.Testimonials {
+  display: flex;
+  gap: 8rem;
+  background-color: #fcfcfc;
+  padding-bottom: 5rem;
+}
+
+.Testimonials_img img {
+  max-width: 35rem;
+}
+
+.Testimonials_text {
+  margin-top: 5rem;
+}
+
+.Testimonials_text h2 {
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
+}
+
+.Testimonials_text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reviews img {
+  max-width: 6rem;
+  border-radius: 60%;
+}
+
+.reviews h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* ----------------------- Join --------------------- */
+
+.Join {
+  margin-top: -5rem;
+}
+
+.Join_text h2 {
+  font-size: 3.5rem;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.email input {
+  width: 20rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border: 1px solid #e6e5e5;
+  border-radius: 11px;
+  box-shadow: -1px 15px 26px -4px rgb(161 151 151 / 15%);
+}
+
+.email button {
+  background-color: #e34036;
+  padding: 1rem 2rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.email button:hover {
+  background-color: #fff;
+  border: 1px solid #e34036;
+  color: #363636;
+}
+
+/* ------------------------ Footer ------------------------ */
+
+footer {
+  background-color: #363636;
+}
+
+.footer_main {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #787878;
+  flex-wrap: wrap;
+}
+
+.footer_detail .h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.footer_detail p {
+  color: #c4bfbf;
+  margin-left: 1rem;
+  line-height: 1.5;
+}
+
+.footer_list {
+  margin-top: 2.8rem;
+}
+
+.footer_list h3 {
+  color: #787878;
+  font-size: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer_list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.footer_list ul li a {
+  color: #c4bfbf;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer_list ul li a:hover {
+  color: #e34036;
+}
+
+.footer_list p {
+  color: #c4bfbf;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #787878;
+}
+
+.list_link {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.list_link a {
+  color: #c4bfbf;
+  text-decoration: none;
+}
+
+.copy_right {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy_links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.copy_links a {
+  text-decoration: none;
+  color: #787878;
+}
+
+/* ----------------------------------------------------------- */
+/* ------------------ Contact Us Page ------------------------ */
+/* ----------------------------------------------------------- */
+
+.contact_cards {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact_card {
+  max-width: 20rem;
+  max-height: 10rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0px 0px 12px 9px rgb(161 151 151 / 15%);
+  transition: all 0.3s;
+}
+
+.contact_card:hover {
+  background-color: #363636;
+  box-shadow: 0px 0px 12px 9px rgb(161 151 151 / 15%);
+}
+
+.contact_card p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.map-container {
+  width: 80%;
+  height: 500px;
+}
+
+.map-container iframe {
+  border-radius: 30px;
+}
+
+.Contact_form {
+  display: flex;
+  gap: 3rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 9px rgb(161 151 151 / 15%);
+  padding: 3rem;
+  border-radius: 30px;
+}
+
+.Contact_form_details h2 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.Contact_form_details p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.contact_form_details_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact_form_details_form input {
+  padding: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  font-size: 1rem;
+}
+
+.contact_form_details_form input::placeholder {
+  color: #c4bfbf;
+}
+
+.contact_form_details_form textarea {
+  height: 7rem;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ececec;
+}
+
+.contact_form_details_form textarea::placeholder {
+  color: #c4bfbf;
+}
+
+.contact_form_details_form button {
+  background-color: #e34036;
+  padding: 1rem;
+  border: none;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.contact_form_details_form button:hover {
+  background-color: #f32116;
+}
+
+/* ------------------------------ reservation_Card --------------------- */
+
+.reservation_Card {
+  display: flex;
+  margin-top: 5rem;
+  gap: 7rem;
+}
+
+.reservation_text {
+  margin-top: 5rem;
+  width: 60%;
+}
+
+.reservation_form {
+  width: 40%;
+}
+
+.reservation_text h2 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #363636;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.reservation_text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.reservation_form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 11px;
+}
+
+.reservation_form h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.reservation_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservation_form form input {
+  padding: 1rem;
+  border: 1px solid #c4bfbf;
+  font-size: 1em;
+  border-radius: 11px;
+}
+
+.reservation_form form button {
+  margin-top: 1rem;
+  background-color: #e34036;
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 11px;
+}
+
+/* ----------------------------------- media query -------------------------------- */
+
+@media (max-width: 1280px) {
+  .row {
+    padding: 1rem 3rem;
+  }
+
+  /* home */
+
+  .home {
+    gap: 4rem;
+  }
+
+  .home_img img {
+    margin-top: -3rem;
+    max-width: 30rem;
+  }
+
+  .home_text h1 {
+    font-size: 3rem;
+  }
+
+  .home_text p {
+    font-size: 1rem;
+  }
+
+  /* Trusted by */
+
+  .Trusted_by {
+    padding: 5rem 0;
+  }
+
+  .trusted_logo {
+    gap: 5rem;
+  }
+
+  .trusted_logo img {
+    max-width: 8rem;
+  }
+
+  /* how works */
+
+  .how_work_cards {
+    gap: 2rem;
+  }
+
+  /* mmission */
+
+  .mission {
+    gap: 4rem;
+  }
+
+  .mission_img img {
+    max-width: 27rem;
+  }
+
+  /* service */
+
+  .service {
+    gap: 4rem;
+  }
+
+  .service_img img {
+    max-width: 27rem;
+  }
+
+  /* testimonials */
+
+  .Testimonials {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    gap: 4rem;
+  }
+
+  .Testimonials_img img {
+    max-width: 27rem;
+  }
+
+  .Testimonials_img {
+    margin-top: 5rem;
+  }
+
+  /* Join */
+
+  .Join {
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  .Join_img img {
+    max-width: 27rem;
+  }
+}
+
+@media (max-width: 1195px) {
+  .service {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service_text {
+    text-align: center;
+  }
+
+  .service_text h2 br {
+    display: none;
+  }
+
+  .service_text h2 {
+    font-size: 2.3rem;
+  }
+
+  .service_food {
+    justify-content: center;
+  }
+
+  .Join_text h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .how_work_cards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .work_card {
+    background-color: #fff;
+    border: 1px solid #c4bfbf;
+    padding: 2rem;
+    border-radius: 11px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 1096px) {
+  .Testimonials_text h2 {
+    font-size: 2.5rem;
+  }
+
+  .Testimonials_text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  .mission_text h2 br {
+    display: none;
+  }
+
+  .mission_text h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 1085px) {
+  .home_img img {
+    max-width: 25rem;
+  }
+}
+
+@media (max-width: 1038px) {
+  .trusted_logo {
+    gap: 3rem;
+  }
+
+  .reservation_Card {
+    gap: 3rem;
+  }
+
+  .header {
+    margin-bottom: 15rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    height: auto;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home_text h1 br {
+    display: none;
+  }
+
+  .home_btn {
+    justify-content: center;
+  }
+
+  .Contact_form {
+    flex-direction: column;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 973px) {
+  .Testimonials {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .Testimonials_img {
+    margin-top: 2rem;
+  }
+
+  .Testimonials_text {
+    text-align: center;
+    margin-top: 2;
+  }
+
+  .Testimonials_text h2 br {
+    display: none;
+  }
+
+  .reviews {
+    display: none;
+  }
+
+  .Join {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .Join_text {
+    text-align: center;
+  }
+
+  .Join_text h2 br {
+    display: none;
+  }
+
+  .email {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .mission {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .mission_img img {
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .trusted_logo img {
+    max-width: 7rem;
+  }
+}
+
+@media (max-width: 885px) {
+  .paragraph br {
+    display: none;
+  }
+
+  .reservation_Card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reservation_text {
+    width: 100%;
+  }
+  
+  .reservation_form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .trusted_logo {
+    gap: 2rem;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .mission {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mission_text {
+    text-align: center;
+  }
+
+  .service {
+    gap: 0;
+  }
+
+  .service_text h2 {
+    font-size: 2rem;
+  }
+
+  .service_text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .service_cards {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 775px) {
+  .trusted_logo {
+    flex-wrap: wrap;
+    padding: 0rem 3rem;
+  }
+}
+
+@media (max-width : 743px) {
+  .copy_right {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+}
+
+@media (max-width: 668px) {
+  .home {
+    gap: 1rem;
+  }
+
+  .home_text h1 {
+    font-size: 2.2rem;
+  }
+
+  .home_img img {
+    max-width: 20rem;
+  }
+
+  .nav_logo .logo {
+    max-width: 5rem;
+  }
+}
+
+@media (max-width: 616px) {
+  .footer_detail p br {
+    display: none;
+  }
+
+  .footer_detail p,
+  .footer_detail .h2 {
+    margin-left: 0;
+  }
+
+  .footer_list P {
+    border-bottom: none;
+  }
+
+}
+
+@media (max-width : 580px) {
+  .Contact_form_details h2 {
+    font-size: 2rem;
+  }
+
+  .Contact_form_details p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 546px) {
+  .Join_img img {
+    max-width: 20rem;
+  }
+
+  .Join_text h2 {
+    font-size: 2rem;
+  }
+
+  .email input {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 532px) {
+  .work_card {
+    width: 25rem;
+  }
+
+  .service_card {
+    width: 23rem;
+  }
+
+  .service_img img {
+    max-width: 20rem;
+  }
+
+  .work_card .img img {
+    max-width: 16rem;
+  }
+
+  .list h3 {
+    font-size: 1.7rem;
+  }
+
+  .text .list h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 473px) {
+  .home_btn a {
+    padding: 1rem 1.5;
+    font-size: 0.9rem;
+  }
+
+  .mission_img {
+    max-width: 20rem;
+  }
+
+  .mission_text h2 {
+    font-size: 2rem;
+  }
+
+  .mission_text p {
+    font-size: 1rem;
+  }
+
+  .Testimonials_img img {
+    max-width: 17rem;
+  }
+
+  .email {
+    flex-direction: column;
+  }
+
+  .email input {
+    width: 100%;
+  }
+
+  .email button {
+    padding: 1rem 8rem;
+  }
+}
+
+@media (max-width: 442px) {
+  .home_btn {
+    flex-direction: column;
+  }
+
+  .row {
+    padding: 1rem 1.5rem;
+  }
+
+  .Trusted_by {
+    padding: 5rem 0;
+  }
+
+  .work_card {
+    width: 20rem;
+    padding: 1rem;
+  }
+
+  .list h3 {
+    font-size: 1.5rem;
+  }
+
+  .service_card {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 389px) {
+  .email input {
+    width: 85%;
+  }
+
+  .email button {
+    padding: 1rem 5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
